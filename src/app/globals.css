@@ -24,3 +24,15 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.navContainer{
+  @apply flex  gap-5 justify-around mt-5
+}
+
+
+
+ul{
+  @apply flex gap-5
+}
+.btn{
+  @apply flex gap-5
+}
