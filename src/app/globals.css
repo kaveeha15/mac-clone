@@ -20,19 +20,65 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  @apply  text-white bg-black
 }
 .navContainer{
-  @apply flex  gap-5 justify-around mt-5
+  @apply flex w-screen   justify-around  fixed top-0 bg-black p-10 z-5
 }
-
-
-
 ul{
-  @apply flex gap-5
+  @apply flex gap-4 hidden md:flex 
 }
 .btn{
   @apply flex gap-5
+}
+@layer components{
+  #hero{
+    @apply flex w-screen justify-center  mt-40 flex-col items-center ;
+    img{
+      @apply w-2/3 
+    }
+    button{
+      @apply w-20 bg-blue-600 rounded-full p-3 hover:bg-blue-50 hover:text-black cursor-pointer transition-all duration-300 font-semibold
+    }
+    p{
+      @apply text-gray-400 font-semibold mt-2
+    } 
+  }
+  #productCanvas{
+    @apply flex flex-col items-center min-h-[97vh] mt-6 relative;
+    h1{
+      @apply text-4xl font-bold
+    }
+    .controllContainer{
+      @apply flex  flex-col items-center absolute bottom-20;
+      p{
+        @apply font-bold
+      }
+      .controlls{
+        @apply flex gap-3 mt-4;
+         .colorController{
+        @apply flex justify-center items-center w-25 bg-gray-600 rounded-full gap-2;
+        div{
+          @apply bg-gray-300  w-7 h-7 rounded-full
+        }
+         div{
+          @apply bg-black w-7 h-7 rounded-full
+        }
+      }
+      .sizeController{
+        @apply flex justify-center items-center w-25 bg-gray-600 h-10 rounded-full gap-2;
+          div{
+          @apply flex justify-center items-center bg-gray-300  w-7 h-7 rounded-full;
+
+          p{
+            @apply font-bold text-sm
+          }
+        }
+       
+      }
+      }
+    
+    }
+  }
 }
