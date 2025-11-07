@@ -3,6 +3,7 @@ import Nav from "../components/nav";
 import Hero from "../components/hero";
 import ProductCanvas from "../components/productCanvas";
 import ProductContextComp from "../context/productContext";
+import ShowCase from "../components/three/showCase";
 export default function Home() {
   return (
     <ProductContextComp>
@@ -10,6 +11,7 @@ export default function Home() {
         <Nav />
         <Hero />
         <ProductCanvas />
+        <ShowCase/>
       </main>
     </ProductContextComp>
 
