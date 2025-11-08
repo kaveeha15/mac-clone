@@ -4,6 +4,7 @@ import Hero from "../components/hero";
 import ProductCanvas from "../components/productCanvas";
 import ProductContextComp from "../context/productContext";
 import ShowCase from "../components/three/showCase";
+import Performance from "../components/performance";
 export default function Home() {
   return (
     <ProductContextComp>
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero />
         <ProductCanvas />
         <ShowCase/>
+        <Performance/>
       </main>
     </ProductContextComp>
 
